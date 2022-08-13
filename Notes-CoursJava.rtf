@@ -111,8 +111,61 @@ finally\{\
 \f1\b0 \
 	- instanceOf -> teste si une variable \'ab\'a0x\'a0\'bb instancie une classe \'ab\'a0y\'a0\'bb\
 	- extends -> \'e9tendre une classe m\'e8re\
-	- super(); -> permet d\'92appeler et de r\'e9utiliser une m\'e9thode de la classe m\'e8re et de la red\'e9finir\
+	- super(); super.method();-> permet d\'92appeler et de r\'e9utiliser le constructeur de la classe m\'e8re ou une m\'e9thode de la classe m\'e8re et de l\'92\'e9tendre.\
 	- protected -> d\'e9clare qu\'92une variable peut-\'eatre utilis\'e9 par les classes filles\
-	- final -> d\'e9clare qu\'92une classe, une m\'e9thode, un attribut ou une variable n\'92est pas \'e9tendage/red\'e9finissable/modifiable dans les classes/m\'e9thodes filles\
+	- final -> d\'e9clare qu\'92une classe, une m\'e9thode, un attribut ou une variable n\'92est pas \'e9tendable/red\'e9finissable/modifiable dans les classes/m\'e9thodes filles\
 	- if <> \{throw new Exception (\'ab\'a0String\'a0\'bb);\}\
+\
+
+\f0\b Classe et classe abstraite
+\f1\b0 \
+	- public class 
+\f2\i NomClass
+\f1\i0 \{\
+					public 
+\f2\i NomConstructeur
+\f1\i0  ()\{\
+					\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf3 					public 
+\f2\i NomMethode
+\f1\i0 ()\{\
+					\}\
+					private 
+\f2\i NomAttribut
+\f1\i0 ;\
+					protected 
+\f2\i NomAttribut
+\f1\i0 ;\
+					public 
+\f2\i NomAttribut
+\f1\i0 ;\
+					\}\
+\
+	- abstract class 
+\f2\i NomClass
+\f1\i0 \{\
+					abstract 
+\f2\i NomMethode
+\f1\i0 ()\{\
+					\}\
+					public 
+\f2\i NomMethode
+\f1\i0 ()\{\
+					\}\
+					private 
+\f2\i NomAttribut
+\f1\i0 ;\
+					protected 
+\f2\i NomAttribut
+\f1\i0 ;\
+					public 
+\f2\i NomAttribut
+\f1\i0 ;\
+					\}\
+					\
+\
+\
+\
+\
 }

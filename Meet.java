@@ -36,7 +36,7 @@ Man meet4= new Man();
 System.out.println(b);
 
 System.out.println("\nCalcul de compatibilité");
-if(meet1.getaAge()-meet2.getaAge()<10) {
+if(meet1.getaAge()-meet4.getaAge()<10) {
   System.out.println(meet1.getaAge());
   System.out.println(meet2.getaAge());
 System.out.println((meet1.getaName()).concat(" et ").concat(meet2.getaName()).concat(" sont compatibles\n"));
