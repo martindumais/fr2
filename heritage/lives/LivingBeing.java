@@ -1,16 +1,22 @@
 //import heritage.lives;
-package heritage;
+package heritage.lives;
 abstract class LivingBeing {
 
- public String who() {
-System.out.println("Classe abstraite : ");
- return aNom;
+ public LivingBeing() {
+System.out.println("\n Classe abstraite LivingBeing: je suis un être vivant");
+   
 }
+ public String who() {
+//System.out.println(" Classe abstraite LivingBeing: je suis un être vivant");
+    return aNom;
+}
+
 abstract void eat();
 
 public void drink(){
 System.out.println("Je bois");
 }
+
 abstract public void communicate();
 
 abstract public void procreate ();

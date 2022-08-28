@@ -1,7 +1,7 @@
 package heritage.lives;
 public class Dog extends Animal{
 public Dog(){
-System.out.println("Je suis un chien");
+System.out.println("DOG : Je suis un chien");
 }
 public void communicate(){
 System.out.println("Je communique");

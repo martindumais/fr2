@@ -1,7 +1,7 @@
-package heritage.lives;
+//package heritage.lives;
 public class Cherry extends Vegetal{
 public Cherry (int age){
-System.out.println("je suis un cerisier de"+age+"ans");
+System.out.println("CHERRY: Je suis un cerisier de"+age+"ans");
 }
 public void germinate(){
   System.out.println("Je germe dans les climats chaud et froid");
