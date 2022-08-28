@@ -1,4 +1,5 @@
-package heritage.livingBeing;
+//import heritage.lives;
+package heritage;
 abstract class LivingBeing {
 
  public String who() {
@@ -6,6 +7,7 @@ System.out.println("Classe abstraite : ");
  return aNom;
 }
 abstract void eat();
+
 public void drink(){
 System.out.println("Je bois");
 }

@@ -1,16 +1,38 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2580
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Oblique;
 }
-{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c1680\c19835\c100000;\cssrgb\c0\c0\c0;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww12680\viewh13740\viewkind0
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red0\green0\blue0;\red52\green52\blue52;
+}
+{\*\expandedcolortbl;;\cssrgb\c1680\c19835\c100000;\cssrgb\c0\c0\c0;\csgray\c26515;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20780\viewh13740\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
 
 \f0\b\fs24 \cf0 Notes Java
 \f1\b0 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\b \cf0 Manipulation de texte (chaines de caract\'e8res)
+\f0\b \cf0 Convention de nommage \
+
+\f1\b0 	\ul Variable/attribut:\ulnone  tout en minuscule. Ex. String nom;\
+	\ul Constante
+\f0\b \ulnone  : 
+\f1\b0 Tout en majuscule. Ex. const NOM;\
+	\ul Methode
+\f0\b \ulnone  :
+\f1\b0  plut\'f4t un verbe, tout en minuscule avec parenth\'e8se \'e0 la fin, et \'e9ventuellement des param\'e8tres avec des accolades pour l\'92impl\'e9menter. Ex.: fly()\{\}\
+	\ul classe
+\f0\b \ulnone  :
+\f1\b0  plut\'f4t un substantif, 1e lettre en majuscule, et on enregistre le fichier avec le m\'eame nom avec l\'92extension \'ab\'a0.java\'a0\'bb. Ex: Game.java\
+
+\f0\b 	
+\f1\b0 \ul Interface 
+\f0\b \ulnone : 
+\f1\b0 1e lettre en majuscule, et terminaison en \'ab\'a0able\'a0\'bb, et on enregistre le fichier avec le m\'eame nom avec l\'92extension \'ab\'a0.java\'a0\'bb. Ex.: Flyable.java\
+
+\f0\b \
+\
+Manipulation de texte (chaines de caract\'e8res)
 \f1\b0  \
 	
 \f0\b \cf2 -String() -> cr\'e9e des chaines immuables 
@@ -48,7 +70,8 @@
 
 \f1\b0 \cf0 \
 
-\f0\b Lecture de donn\'e9es
+\f0\b \
+Lecture de donn\'e9es
 \f1\b0 \
 
 \f0\b \cf2 - BufferedReader() ->  monothread (plus lent) : lit les donn\'e9es entr\'e9es par l\'92utilisateur comme un String => java.io.BufferedReader\
@@ -72,8 +95,9 @@
 - InputStreamReader() -> m\'e9taclasse de lecture de flux d\'92entr\'e9es (System.In) => java.io.InputStreamReader\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf3 Package
-\f1\b0 \
+\cf3 \
+Package 
+\f1\b0 (=organisation des dossiers du programme : la classe racine importe les classes auxquelles elle fait appel)\
 Projet -> Langue -> packages : modules, fonctionnalit\'e9s -> classes ?\
 MonProjet (main.java et main.class) ->  Suffixe -> domaine-> packages: fonctionnalit\'e9s -> classes \
 
@@ -83,75 +107,92 @@ MonProjet (main.java et main.class) ->  Suffixe ->modules -> packages-> classes 
 	==>  fr.dmlp.mypackage.class 
 \f2\i \ul ou bien
 \f1\i0 \ulnone  fr.dmlp.mypackage.*\
+	\
+	import 
+\f2\i package.classe
+\f1\i0 ;		
+\f2\i \'97> importe la classe indiqu\'e9e du package/dossier
+\f1\i0 \
+	import 
+\f2\i package.*; 			\'97> importe toutes les classes du package/dossier
+\f1\i0 \
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\b \cf3 Exceptions - D\'e9bogage
+\f0\b \cf3 \
+Exceptions - D\'e9bogage
 \f1\b0 \
-try\{\
-\}\
-catch(typeException e)\{\
-\}\
-finally\{\
-\}\
+	- try\{\
+		\}\
+	catch(typeException e)\{\
+						\}\
+	finally\{\
+		\}\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf2 - InputMismatchException\
-- NoSuchElementException\
-- RuntimeException\
-- IOException\
-- IndexOutOfBoundsException\
-- \'85\cf3 \
+\cf2 	- InputMismatchException\
+	- NoSuchElementException\
+	- RuntimeException\
+	- IOException\
+	- IndexOutOfBoundsException\
+	- \'85\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf3 \
 	- e.getMessage();\
 	- e.printStackTrace();\
+\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\b \cf3 H\'e9ritage
 \f1\b0 \
 	- instanceOf -> teste si une variable \'ab\'a0x\'a0\'bb instancie une classe \'ab\'a0y\'a0\'bb\
-	- extends -> \'e9tendre une classe m\'e8re\
+	- extends -> une classe fille \'e9tend une et une seule classe m\'e8re (et toutes ses m\'e9thodes obligatoirement)\
 	- super(); super.method();-> permet d\'92appeler et de r\'e9utiliser le constructeur de la classe m\'e8re ou une m\'e9thode de la classe m\'e8re et de l\'92\'e9tendre.\
 	- protected -> d\'e9clare qu\'92une variable peut-\'eatre utilis\'e9 par les classes filles\
 	- final -> d\'e9clare qu\'92une classe, une m\'e9thode, un attribut ou une variable n\'92est pas \'e9tendable/red\'e9finissable/modifiable dans les classes/m\'e9thodes filles\
 	- if <> \{throw new Exception (\'ab\'a0String\'a0\'bb);\}\
 \
 
-\f0\b Classe et classe abstraite
+\f0\b \
+Classe et classe abstraite
 \f1\b0 \
-	- public class 
-\f2\i NomClass
-\f1\i0 \{\
+	- \cf2 public class extends 
+\f2\i \cf2 NomClass
+\f1\i0 \cf3 \{				\'97> extends permet d\'92h\'e9riter d\'92une et d\'92une seule classe m\'e8re en impl\'e9mentant toutes ses m\'e9thodes abstraites et \ul celles de ses parents\ulnone .\
 					public 
 \f2\i NomConstructeur
-\f1\i0  ()\{\
+\f1\i0  () \{\
 					\}\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf3 					public 
+					public 
 \f2\i NomMethode
 \f1\i0 ()\{\
+					\}\
+					public static 
+\f2\i NomMethode
+\f1\i0 () \{	\'97> permet d\'92appeler la classe sans cr\'e9er d\'92instance\
 					\}\
 					private 
 \f2\i NomAttribut
-\f1\i0 ;\
+\f1\i0 ;			\'97> L\'92attribut est disponible seulement  dans sa classe\
 					protected 
 \f2\i NomAttribut
-\f1\i0 ;\
+\f1\i0 ;		\'97> L\'92attribut est disponible pour les classes filles\
 					public 
 \f2\i NomAttribut
-\f1\i0 ;\
+\f1\i0 ;			\'97> L\'92attribut est atteignable de partout\
 					\}\
 \
-	- abstract class 
-\f2\i NomClass
-\f1\i0 \{\
+	- \cf2 abstract class 
+\f2\i \cf2 NomClass
+\f1\i0 \cf3 \{ 					\'97>  N\'92a pas de constructeur et ne peut-\'eatre instanci\'e9.\
 					abstract 
 \f2\i NomMethode
-\f1\i0 ()\{\
-					\}\
+\f1\i0 ();		\'97> \cf0 \cb4 Doit contenir au moins une m\'e9thode abstraite\cf3 , qui\cb1  ne s\'92impl\'e9mente jamais dans la classe m\'e8re, mais doit \'eatre impl\'e9menter dans les classes non abstraites filles.\
+					\
 					public 
 \f2\i NomMethode
-\f1\i0 ()\{\
+\f1\i0 ()\{		\'97> m\'e9thode non abstraite qui s\'92impl\'e9mente dans la classe m\'e8re et est \'e9tendable/red\'e9finissable dans les classes filles..\
 					\}\
 					private 
 \f2\i NomAttribut
@@ -164,6 +205,31 @@ finally\{\
 \f1\i0 ;\
 					\}\
 					\
+\
+
+\f0\b Interface
+\f1\b0 \
+	 - \cf2 interface 
+\f2\i \cf2 NomInterface
+\f1\i0 \cf3  \{  					\'97> N\'92a pas de constructeur et ne peut-\'eatre intsanci\'e9.\
+						void 
+\f2\i nomMethod
+\f1\i0 (); 		\'97> m\'e9thode abstraite\
+						\}\
+	\
+	- extends \'97> \'e9tend une autre interface\
+	- ( implements 								\'97> une classe impl\'e9mente une (ou plusieurs) interface(s) (et toutes ses m\'e9thodes obligatoirement))\
+	- @FonctionnalInterface						\'97> interface ne comprenant qu\'921 m\'e9thode (abstraite)\
+	- default void 
+\f2\i NomMethodeParDefaut				\'97> permet d\'92avoir une m\'e9thode par d\'e9faut impl\'e9mentable dans l\'92interface et red\'e9finissable au besoin dans la classe qui l\'92impl\'e9mente
+\f1\i0 \
+	- public final 
+\f2\i NomAttribut
+\f1\i0 ()\{					\'97> les variables ne peuvent  \'eatre que \'ab\'a0final\'a0\'bb\
+	- public static 
+\f2\i NomMethode
+\f1\i0 ()\{					\'97> permet d\'92appeler l\'92interface (sans instance)??\
+						\}\
 \
 \
 \
