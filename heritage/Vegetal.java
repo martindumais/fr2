@@ -1,16 +1,16 @@
-//import heritage.lives.*;
-package heritage.lives;
-abstract class Vegetal extends LivingBeing {
+ package heritage;
+// import heritage.LivingBeing;
+public abstract class Vegetal extends LivingBeing {
     public Vegetal(){
         System.out.println(" Classe abstraite Vegetal: Je suis un végétal");
     }
     public void eat(){
 System.out.println("Je me nourris de ");
 }
-abstract void germinate();
-abstract void grow();
+public abstract void germinate();
+public abstract void grow();
 // public void flower (){
 // System.out.println("Je fleuris");
 // }
-abstract void dead();
+public abstract void dead();
 }

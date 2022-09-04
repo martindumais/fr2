@@ -1,18 +1,21 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2580
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Oblique;
 }
-{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red0\green0\blue0;\red52\green52\blue52;
-}
-{\*\expandedcolortbl;;\cssrgb\c1680\c19835\c100000;\cssrgb\c0\c0\c0;\csgray\c26515;
-}
+{\colortbl;\red255\green255\blue255;\red33\green255\blue6;\red0\green0\blue255;\red0\green0\blue0;
+\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c97680\c0;\cssrgb\c1680\c19835\c100000;\cssrgb\c0\c0\c0;
+\cssrgb\c100000\c100000\c100000;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww20780\viewh13740\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
 
 \f0\b\fs24 \cf0 Notes Java
 \f1\b0 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-
-\f0\b \cf0 Convention de nommage \
+\cf0 \cb2 			Mots-cl\'e9s java
+\f0\b \cb1 \
+\
+\
+Convention de nommage \
 
 \f1\b0 	\ul Variable/attribut:\ulnone  tout en minuscule. Ex. String nom;\
 	\ul Constante
@@ -35,7 +38,7 @@
 Manipulation de texte (chaines de caract\'e8res)
 \f1\b0  \
 	
-\f0\b \cf2 -String() -> cr\'e9e des chaines immuables 
+\f0\b \cf3 -String() -> cr\'e9e des chaines immuables 
 \f1\b0 \cf0 \
 	- .concat(\'ab\'a0string\'a0\'bb) -> concat\'e9nation\
 	-.replace(\'ab\'a0a\'a0\'bb, \'ab\'a0a\'92\'a0\'bb) -> remplacement de caract\'e8res \
@@ -49,13 +52,13 @@ Manipulation de texte (chaines de caract\'e8res)
 	-.compareTo(a)\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf2 	
+\cf3 	
 \f0\b -StringTokenizer(a,\'a0\'ab\'a0/\'ab, true\'a0\'a0) -> divise une chaine =>java.util.StringTokenizer
 \f1\b0 \cf0 \
 	-.hasMoreTokens() -> pour contr\'f4ler les bouts de chaine r\'e9sultants de la division\
 	-.nextToken() -> manipulation/r\'e9cup\'e9ration/acc\'e8s au prochain bout de chaine divis\'e9\
 \
-\cf2 	
+\cf3 	
 \f0\b -StringBuffer() -> multithreads (plus lent) : cr\'e9e des chaines muables
 \f1\b0 \cf0 \
 	-.append(\'ab\'a0string\'a0\'bb) -> ajoute du texte \'e0 la fin d\'92une chaine existante dans une variable\
@@ -64,7 +67,7 @@ Manipulation de texte (chaines de caract\'e8res)
 	-.length() -> donne la longueur de la chaine contenu dans la variable\
 	- .replace(index, No, \'ab\'a0string\'a0\'bb) ->\
 \
-\cf2 	
+\cf3 	
 \f0\b -StringBuilder() -> monothread (plus rapide) : cr\'e9e des chaines muables \cf0 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
@@ -74,52 +77,65 @@ Manipulation de texte (chaines de caract\'e8res)
 Lecture de donn\'e9es
 \f1\b0 \
 
-\f0\b \cf2 - BufferedReader() ->  monothread (plus lent) : lit les donn\'e9es entr\'e9es par l\'92utilisateur comme un String => java.io.BufferedReader\
+\f0\b \cf3 - BufferedReader() ->  monothread (plus lent) : lit les donn\'e9es entr\'e9es par l\'92utilisateur comme un String => java.io.BufferedReader\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f1\b0 \cf3 	- .read() -> lit le premier caract\'e8re et transmet son code ASCII => attend un Char\
+\f1\b0 \cf4 	- .read() -> lit le premier caract\'e8re et transmet son code ASCII => attend un Char\
 	- .readLine()-> lit une chaine de caract\'e8res et le transmet=> attend un String\
 	- .skip() -> saute des caract\'e8res => attend un Long\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\b \cf2 \
+\f0\b \cf3 \
 - scanner() -> multithreads (plus rapide) : lit et analyse (parsing) les donn\'e9es de l\'92utilisateur pour d\'e9terminer si son type correspond \'e0 celui attendu =>java.util.Scanner\
 	
-\f1\b0 \cf3 - .nextChar()\
+\f1\b0 \cf4 - .nextChar()\
 	- .nextLine()\
 	- .nextInt()\
 	- .nextFloat()\
 	- .nextBoolean()\
 
-\f0\b \cf2 \
+\f0\b \cf3 \
 - InputStreamReader() -> m\'e9taclasse de lecture de flux d\'92entr\'e9es (System.In) => java.io.InputStreamReader\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf3 \
+\cf4 \
 Package 
 \f1\b0 (=organisation des dossiers du programme : la classe racine importe les classes auxquelles elle fait appel)\
-Projet -> Langue -> packages : modules, fonctionnalit\'e9s -> classes ?\
-MonProjet (main.java et main.class) ->  Suffixe -> domaine-> packages: fonctionnalit\'e9s -> classes \
-
-\f2\i \ul \ulc3 	
-\f1\i0 \ulnone ==>  fr.dmlp.mypackage\
-MonProjet (main.java et main.class) ->  Suffixe ->modules -> packages-> classes \
-	==>  fr.dmlp.mypackage.class 
-\f2\i \ul ou bien
-\f1\i0 \ulnone  fr.dmlp.mypackage.*\
-	\
-	import 
-\f2\i package.classe
-\f1\i0 ;		
-\f2\i \'97> importe la classe indiqu\'e9e du package/dossier
-\f1\i0 \
-	import 
-\f2\i package.*; 			\'97> importe toutes les classes du package/dossier
-\f1\i0 \
 \
+	\cb2 package\cb1  
+\f2\i nonPackage ;
+\f1\i0  		\'97> d\'e9clare la classe comme faisant parti du package/cheminDeDossiers indiqu\'e9 \
+\
+	\cb2 import\cb1  
+\f2\i package.classe 
+\f1\i0 ;		
+\f2\i \'97> importe la classe indiqu\'e9e du package/
+\f1\i0 cheminDeDossiers
+\f2\i  (\ul \'ab\'a0import\'a0\'bb se place apr\'e8s \'ab\'a0package\'a0\'bb, sinon on obtient de nombreuses erreurs !)
+\f1\i0 \ulnone \
+	\cb2 import\cb1  
+\f2\i package.* ; 			\'97> importe toutes les classes du package/
+\f1\i0 cheminDeDossiers\
+\
+		Exemples: Projet -> Langue -> packages : modules, fonctionnalit\'e9s -> classes ?\
+		MonProjet (main.java et main.class) ->  Suffixe -> domaine-> packages: fonctionnalit\'e9s -> classes \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\b \cf3 \
+\f2\i \cf4 \ul \ulc4 			
+\f1\i0 \ulnone ==>  \cb5 package\cb1  
+\f2\i fr.dmlp.mypackage;
+\f1\i0 \
+		MonProjet (main.java et main.class) ->  Suffixe ->modules -> packages-> classes \
+			==> \cb5 package\cb1  
+\f2\i fr.dmlp.mypackage.class;
+\f1\i0  \ul ou bien\ulnone  package 
+\f2\i fr.dmlp.mypackage.*;\
+
+\f1\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b \cf4 \
+\
 Exceptions - D\'e9bogage
 \f1\b0 \
 	- try\{\
@@ -130,43 +146,49 @@ Exceptions - D\'e9bogage
 		\}\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf2 	- InputMismatchException\
+\cf3 	- InputMismatchException\
 	- NoSuchElementException\
 	- RuntimeException\
 	- IOException\
 	- IndexOutOfBoundsException\
 	- \'85\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf3 \
+\cf4 \
 	- e.getMessage();\
 	- e.printStackTrace();\
 \
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\b \cf3 H\'e9ritage
+\f0\b \cf4 H\'e9ritage
 \f1\b0 \
-	- instanceOf -> teste si une variable \'ab\'a0x\'a0\'bb instancie une classe \'ab\'a0y\'a0\'bb\
-	- extends -> une classe fille \'e9tend une et une seule classe m\'e8re (et toutes ses m\'e9thodes obligatoirement)\
-	- super(); super.method();-> permet d\'92appeler et de r\'e9utiliser le constructeur de la classe m\'e8re ou une m\'e9thode de la classe m\'e8re et de l\'92\'e9tendre.\
-	- protected -> d\'e9clare qu\'92une variable peut-\'eatre utilis\'e9 par les classes filles\
-	- final -> d\'e9clare qu\'92une classe, une m\'e9thode, un attribut ou une variable n\'92est pas \'e9tendable/red\'e9finissable/modifiable dans les classes/m\'e9thodes filles\
-	- if <> \{throw new Exception (\'ab\'a0String\'a0\'bb);\}\
+	- instanceOf(); 				\'97> teste si une variable \'ab\'a0x\'a0\'bb instancie une classe \'ab\'a0y\'a0\'bb\
+	- \cb2 extends\cb1  					\'97> une classe fille concr\'e8te (non abstract) \'e9tend une et une seule classe m\'e8re (et toutes ses m\'e9thodes obligatoirement)\
+	- \cb2 super()\cb1 ; 					\'97> permet d\'92appeler et de r\'e9utiliser le constructeur de la classe m\'e8re et de l\'92\'e9tendre.\
+	- super.method();			\'97> permet d\'92appeler et de r\'e9utiliser une m\'e9thode de la classe m\'e8re et de l\'92\'e9tendre.\
+	- \cb2 protected\cb1  				\'97> d\'e9clare qu\'92une variable peut-\'eatre utilis\'e9 par les classes filles\
+	- \cb2 final\cb1  					\'97> d\'e9clare qu\'92une classe, une m\'e9thode, un attribut ou une variable n\'92est pas \'e9tendable/red\'e9finissable/modifiable dans les classes/m\'e9thodes filles\
+	- if < \'85 > \{\
+		throw new Exception (\'ab\'a0String\'a0\'bb);\
+			\}\
 \
 
 \f0\b \
-Classe et classe abstraite
-\f1\b0 \
-	- \cf2 public class extends 
-\f2\i \cf2 NomClass
-\f1\i0 \cf3 \{				\'97> extends permet d\'92h\'e9riter d\'92une et d\'92une seule classe m\'e8re en impl\'e9mentant \ul obligatoirement\ulnone  toutes ses m\'e9thodes abstraites et \ul celles de ses parents\ulnone .\
+Classe et classe abstraite 
+\f1\b0 (private par d\'e9faut)
+\f0\b \
+	
+\f1\b0 \cf3 - classe concr\'e8te\cf4 \
+		\cb2 public\cb1  \cb2 class\cb1  
+\f2\i NomClass 
+\f1\i0 \{					\'97> Une classe concr\'e8te d\'e9finie par le mot cl\'e9 \'ab\'a0class\'a0\'bb, \'ab\'a0public\'a0\'bb ou \'ab\'a0private\'a0\'bb permet de construire des objets\
 					public 
 \f2\i NomConstructeur
-\f1\i0  () \{\
+\f1\i0  () \{	\'97> Le constructeur de l\'92objet d\'e9finit l\'92objet\
 					\}\
 					public 
 \f2\i NomMethode
-\f1\i0 ()\{\
+\f1\i0 ()\{		\'97> Les m\'e9thodes de la classe d\'e9finit les actions que peut op\'e9rer l\'92objet\
 					\}\
 					public static 
 \f2\i NomMethode
@@ -181,19 +203,49 @@ Classe et classe abstraite
 					public 
 \f2\i NomAttribut
 \f1\i0 ;			\'97> L\'92attribut est atteignable de partout\
-					\}\
+					\}
+\f0\b \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b0 \cf4 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf3 	- h\'e9ritage\cf4 \
+\cf3 		\cf4 public class 
+\f2\i NomClass
+\f1\i0  extends 
+\f2\i NomClass\'92 
+\f1\i0 \{		\'97> \'ab\'a0extends\'a0\'bb permet \'e0 une classe enfant d\'92h\'e9riter d\'92une et d\'92une seule classe m\'e8re. Si la classe enfant est concr\'e8te, il est de d\'e9finir  toutes ses m\'e9thodes abstraites et \ul celles de ses parents\ulnone .\
+										\}\
 \
-	- \cf2 abstract class 
-\f2\i \cf2 NomClass
-\f1\i0 \cf3 \{ 					\'97>  N\'92a pas de constructeur et ne peut-\'eatre instanci\'e9.\
+	\cf3 - Interface \cf4 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf4 \cb5 		public class 
+\f2\i NomClass 
+\f1\i0 implements
+\f2\i  NomInterface 
+\f1\i0 \cb1 \{	\'97> \'ab\'a0implements\'a0\'bb permet \'e0 une classe d\'92impl\'e9menter une interface\
+											\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf3 \cb5 	- classe abstraite\cf4 \cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf4 \cb5 		public \cb2 abstract\cb5  class 
+\f2\i NomClass 
+\f1\i0 \cb1 \{ 			\'97>  Classe abstraite d\'e9finie par le mot cl\'e9 \'ab\'a0abstract\'a0\'bb et qui permet de hi\'e9rarchiser les classes, ne peut-\'eatre instanci\'e9.\
+					public 
+\f2\i nomConstructeur
+\f1\i0 ()\{		\'97> constructeur qui est \'e9tendable/red\'e9finissable dans les classes filles.\
+										\}\
+\
 					abstract 
-\f2\i NomMethode
-\f1\i0 ();		\'97> \cf0 \cb4 Doit contenir au moins une m\'e9thode abstraite\cf3 , qui\cb1  ne s\'92impl\'e9mente jamais dans la classe m\'e8re, mais doit \'eatre impl\'e9menter dans les classes non abstraites filles.\
+\f2\i NomMethode 
+\f1\i0 () ;		\'97> Est d\'e9clar\'e9 mais jamais d\'e9fini dans la classe m\'e8re, mais doit \'eatre obligatoirement d\'e9fini dans les classes non abstraites filles.\
 					\
 					public 
 \f2\i NomMethode
-\f1\i0 ()\{		\'97> m\'e9thode non abstraite qui s\'92impl\'e9mente dans la classe m\'e8re et est \'e9tendable/red\'e9finissable dans les classes filles..\
-					\}\
+\f1\i0 () \{		\'97> m\'e9thode non abstraite qui se d\'e9finit dans la classe m\'e8re et est \'e9tendable/red\'e9finissable dans les classes filles..\
+									\}\
+\
 					private 
 \f2\i NomAttribut
 \f1\i0 ;\
@@ -203,25 +255,26 @@ Classe et classe abstraite
 					public 
 \f2\i NomAttribut
 \f1\i0 ;\
-					\}\
+						\}\
 					\
 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\b Interface
+\f0\b \cf4 Interface
 \f1\b0 \
-	 - \cf2 interface 
-\f2\i \cf2 NomInterface
-\f1\i0 \cf3  \{  					\'97> N\'92a pas de constructeur et ne peut-\'eatre intsanci\'e9.\
+	 - \cb2 interface\cb5  
+\f2\i NomInterface
+\f1\i0  \cb1 \{  					\'97> N\'92a pas de constructeur et ne peut-\'eatre instanci\'e9.\
 						void 
 \f2\i nomMethod
 \f1\i0 (); 		\'97> m\'e9thode abstraite\
 						\}\
 	\
 	- extends \'97> \'e9tend une autre interface\
-	- ( implements 								\'97> une classe impl\'e9mente une (ou plusieurs) interface(s) (et toutes ses m\'e9thodes obligatoirement))\
+	- \cb2 implements\cb1  								\'97> une classe impl\'e9mente une (ou plusieurs) interface(s) (et toutes ses m\'e9thodes obligatoirement))\
 	- @FonctionnalInterface						\'97> interface ne comprenant qu\'921 m\'e9thode (abstraite)\
 	- default void 
-\f2\i NomMethodeParDefaut				\'97> permet d\'92avoir une m\'e9thode par d\'e9faut impl\'e9mentable dans l\'92interface et red\'e9finissable au besoin dans la classe qui l\'92impl\'e9mente
+\f2\i NomMethodeParDefaut				\'97> permet d\'92avoir une m\'e9thode par d\'e9faut d\'e9finissable dans l\'92interface et red\'e9finissable au besoin dans la classe qui l\'92impl\'e9mente
 \f1\i0 \
 	- public final 
 \f2\i NomAttribut
@@ -230,6 +283,16 @@ Classe et classe abstraite
 \f2\i NomMethode
 \f1\i0 ()\{					\'97> permet d\'92appeler l\'92interface (sans instance)??\
 						\}\
+\
+
+\f0\b Plymorphisme
+\f1\b0 \
+	\
+\
+\
+\
+\
+\
 \
 \
 \
